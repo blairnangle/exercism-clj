@@ -1,5 +1,5 @@
 (ns exercism-clj.interest-is-interesting.interest-is-interesting-test
-  (:require [clojure.test :refer [deftest testing is]]
+  (:require [clojure.test :refer [deftest is]]
             [exercism-clj.interest-is-interesting.interest-is-interesting :as interest-is-interesting]))
 
 (deftest minimal-first-interest-rate-test
