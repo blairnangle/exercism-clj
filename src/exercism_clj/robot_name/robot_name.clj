@@ -16,10 +16,6 @@
   (str (rand-int 1000))
   )
 
-(def robot-state
-  (atom {})
-  )
-
 (defn- generate-name
   []
   (apply
@@ -31,23 +27,15 @@
 
 (defn robot
   []
-  (let [name (generate-name)]
-    (swap! robot-state assoc :name name)
-    {
-     :name name
-     }
-    )
+  (atom
+    {:name (generate-name)})
   )
 
 (defn robot-name
   [robot]
-  (get @robot-state :name)
-  )
-
+  (:name @robot))
 
 (defn reset-name
   [robot]
-  (let [new-name (generate-name)]
-    (swap! robot-state assoc :name new-name)
-    (get @robot-state :name))
+  (swap! robot assoc :name (generate-name))
   )
