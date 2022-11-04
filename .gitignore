@@ -13,3 +13,6 @@ pom.xml.asc
 .hg/
 .idea/
 *.iml
+
+# Project-specific Git commit message (to configure: git config commit.template .gitmessage)
+.gitmessage
