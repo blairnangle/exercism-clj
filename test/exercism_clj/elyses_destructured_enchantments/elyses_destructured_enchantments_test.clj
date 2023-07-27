@@ -1,6 +1,6 @@
 (ns exercism-clj.elyses-destructured-enchantments.elyses-destructured-enchantments-test
-  (:require [clojure.test :refer :all]
-            [exercism-clj.elyses-destructured-enchantments.elyses-destructured-enchantments :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            [exercism-clj.elyses-destructured-enchantments.elyses-destructured-enchantments :refer [first-card second-card swap-top-two-cards discard-top-card insert-face-cards]]))
 
 (deftest first-card-single-test
   (is (= (first-card [3]) 3)))

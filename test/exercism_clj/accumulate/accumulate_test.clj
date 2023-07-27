@@ -1,5 +1,6 @@
 (ns exercism-clj.accumulate.accumulate-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [clojure.string :as str]
+            [clojure.test :refer [deftest is]]
             [exercism-clj.accumulate.accumulate :as accumulate]))
 
 (defn- square [n] (* n n))
@@ -15,7 +16,7 @@
 (deftest accumulate-upcases
   (is (= ["HELLO", "WORLD"]
          (->> ["hello" "world"]
-              (accumulate/accumulate clojure.string/upper-case)
+              (accumulate/accumulate str/upper-case)
               (map to-s)))))
 
 (deftest accumulate-reversed-strings

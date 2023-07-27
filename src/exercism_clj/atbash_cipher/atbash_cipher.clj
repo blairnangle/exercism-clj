@@ -22,7 +22,7 @@
 
 (defn- split-every-n
   [s n]
-  (clojure.string/join " " (map #(clojure.string/join %) (partition-all n s)))
+  (str/join " " (map #(str/join %) (partition-all n s)))
   )
 
 (defn encode

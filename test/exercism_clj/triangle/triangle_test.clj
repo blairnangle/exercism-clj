@@ -1,5 +1,5 @@
 (ns exercism-clj.triangle.triangle-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [clojure.test :refer [deftest is]]
             [exercism-clj.triangle.triangle :as triangle]))
 
 (deftest is-valid
